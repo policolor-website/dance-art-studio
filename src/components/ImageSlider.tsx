@@ -37,7 +37,7 @@ export default function ImageSlider() {
   }, [next]);
 
   return (
-    <section className="py-12 bg-night overflow-hidden">
+    <section className="py-12 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-8">
           <p className="text-gold text-sm font-semibold uppercase tracking-[0.3em] mb-4">

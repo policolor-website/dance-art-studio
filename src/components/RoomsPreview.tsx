@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function RoomsPreview() {
   return (
-    <section className="py-24 bg-night-light">
+    <section className="py-24 bg-night-light/50">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="text-center mb-16">
           <p className="text-gold text-sm font-semibold uppercase tracking-[0.3em] mb-4">

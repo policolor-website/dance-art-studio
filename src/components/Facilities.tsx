@@ -18,7 +18,7 @@ const iconMap: Record<string, string> = {
 
 export default function Facilities() {
   return (
-    <section className="py-24 bg-night">
+    <section className="py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="text-center mb-16">
           <p className="text-gold text-sm font-semibold uppercase tracking-[0.3em] mb-4">
