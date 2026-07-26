@@ -34,7 +34,7 @@ const faqItems = [
       "Da, oferim posibilitatea de închiriere integrală a celor 3 cabane (maxim 30 persoane) pentru evenimente, team-building-uri sau petreceri de Crăciun. Disponibil și All Inclusive / Ultra All Inclusive pentru grupuri.",
   },
   {
-    question: "Copiii sunt bineveniți?",
+    question: "Copii beneficiază de reducere?",
     answer:
       "Da! Copiii 0-6 ani beneficiază de cazare și masă GRATUIT. Copiii 6-14 ani au -50% din preț. Avem loc de joacă, trambulină, tobogan, hamace și plimbări cu poneii Chico și Zoro.",
   },
