@@ -4,8 +4,8 @@ import { blogPosts } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Blog — Cabanele Rus Budești Maramureș",
-  description: "Descoperă atracțiile turistice din Maramureș și zona Budești.",
+  title: "Blog — Dance Art Studio",
+  description: "Descoperă articole despre balet, dans clasic, sfaturi pentru părinți și noutăți din Dance Art Studio.",
 };
 
 export default function BlogPage() {
@@ -14,7 +14,7 @@ export default function BlogPage() {
         <div className="relative text-center mb-12 py-16">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="/images/cabanele-rus/hotel-38291944.jpg"
+              src="/images/ballet/ballet-shoes.jpg"
               alt=""
               fill
               className="object-cover opacity-10"
@@ -22,8 +22,8 @@ export default function BlogPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <h1 className="font-display text-5xl font-bold text-cream mb-4">Blog</h1>
-            <p className="text-muted text-lg">Descoperă zona Budești și Maramureș</p>
-            <div className="w-24 h-px gold-line mx-auto mt-6" />
+            <p className="text-muted text-lg">Articole, sfaturi și noutăți</p>
+            <div className="w-24 h-px rose-line mx-auto mt-6" />
           </div>
         </div>
 
@@ -42,11 +42,11 @@ export default function BlogPage() {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-night/80 to-transparent" />
                 </div>
-                <h2 className="font-display text-xl font-bold text-cream mb-2 group-hover:text-gold transition-colors">
+                <h2 className="font-display text-xl font-bold text-cream mb-2 group-hover:text-rose transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-muted text-sm mb-3">{post.excerpt}</p>
-                <span className="text-gold text-sm font-semibold">Vezi tot →</span>
+                <span className="text-rose text-sm font-semibold">Vezi tot →</span>
               </Link>
             </Reveal>
           ))}

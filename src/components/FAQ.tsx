@@ -4,44 +4,44 @@ import { useState } from "react";
 
 const faqItems = [
   {
-    question: "Ce ore sunt check-in-ul și check-out-ul?",
+    question: "De la ce vârstă pot începe copiii cursurile de balet?",
     answer:
-      "Check-in-ul se face începând cu ora 14:00, iar check-out-ul până la ora 11:00. Pentru arrivări târzii sau cerințe speciale, vă rugăm să ne contactați telefonic.",
+      "Copiii pot începe cursul de Ballet Bebeluși de la vârsta de 3 ani. Acest curs este conceput special pentru cei mici, folosind jocul și mișcarea pentru a introduce baletul într-un mod plăcut și accesibil.",
   },
   {
-    question: "Care sunt tarifele de cazare?",
+    question: "Care sunt tarifele cursurilor?",
     answer:
-      "Doar cazare: 100 lei/pers/noapte. Cu mic dejun: 150 lei/pers/noapte. Mic dejun + prânz/cină: 250 lei/pers/noapte. Pensiune completă: 350 lei/pers/noapte. Copii 0-6 ani: gratuit. Copii 6-14 ani: -50%. Închiriere integrală: 2000 lei.",
+      "Ballet Bebeluși (3-5 ani): 120 lei/lună. Ballet Copii (6-9 ani): 180 lei/lună. Ballet Adolescenți (10-14 ani): 250 lei/lună. Ballet Adulți (18+): 200 lei/lună. Program Pre-profesional: 400 lei/lună. Reduceri pentru familii cu mai mulți copii înscriși.",
   },
   {
-    question: "Aveți parcare gratuită?",
+    question: "Ce echipament este necesar pentru cursuri?",
     answer:
-      "Da, dispunem de parcare privată gratuită pentru toți oaspeții noștri, direct la fața locului.",
+      "Pentru începători: leotard, colanți, papuci de balet și părul strâns. Pentru avansați: pointe (la recomandarea profesorului). Lista completă de echipament se primește la înscriere. Putem recomanda magazine specializate.",
   },
   {
-    question: "Ce facilități aveți?",
+    question: "Aveți parcarea gratuită?",
     answer:
-      "Piscină încălzită cu vedere, 2 ciubere exterioare încălzite, șemineu, trambulină, tobogan, hamace, șezlonguri, foișor, grătar profesional, ceaun, disc, plită pe lemne, cuptor pâine, terasă, loc de joacă copii, WiFi, tir cu arcul, badminton, haine tradiționale pentru poze.",
+      "Da, dispunem de parcare privată gratuită pentru toți părinții și elevii noștri, direct la fața locului.",
   },
   {
-    question: "Ce atracții turistice sunt în apropiere?",
+    question: "Ce facilități are studioul?",
     answer:
-      "La 2 min: curse cu sanii trase de Husky. La 3 km: Biserica UNESCO Budești (Pintea Viteazul). La 5 km: pârtii de schi Cavnic și Casele Prințului Charles din Breb. La 13 km: bazine cu apă sărată Ocna Șugatag. La 30 km: Mănăstirea Bârsana. La 40 km: Cimitirul Vesel Săpânța.",
+      "Studioul este dotat cu parchet profesional de dans, oglinzi pe întreg peretele, bare reglabile pe două niveluri, pian cu acompaniator live, sistem audio profesional, aer condiționat, vestiar cu dulapuri individuale și zonă de hidratare.",
   },
   {
-    question: "Se pot organiza evenimente sau închiriere integrală?",
+    question: "Elevii participă la spectacole și competiții?",
     answer:
-      "Da, oferim posibilitatea de închiriere integrală a celor 3 cabane (maxim 30 persoane) pentru evenimente, team-building-uri sau petreceri de Crăciun. Disponibil și All Inclusive / Ultra All Inclusive pentru grupuri.",
+      "Da, organizăm Gala Anuală de Balet unde toți elevii dansează pe scenă. Elevii avansați participă la competiții naționale și internaționale, examene de nivel recunoscute și masterclass-uri cu invitați speciali.",
   },
   {
-    question: "Copii beneficiază de reducere?",
+    question: "Pot face cursuri de balet dacă sunt adult și nu am experiență?",
     answer:
-      "Da! Copiii 0-6 ani beneficiază de cazare și masă GRATUIT. Copiii 6-14 ani au -50% din preț. Avem loc de joacă, trambulină, tobogan, hamace și plimbări cu poneii Chico și Zoro.",
+      "Absolut! Cursul de Ballet Adulți este deschis tuturor nivelurilor, inclusiv începători totali. Baletul pentru adulți oferă multiple beneficii: postură, flexibilitate, tonifiere și relaxare. Nu este necesară experiență anterioară.",
   },
   {
-    question: "Aveți WiFi gratuit?",
+    question: "Cum se face înscrierea?",
     answer:
-      "Da, toate camerele și spațiile comune dispun de WiFi gratuit cu acces internet.",
+      "Înscrierea se face prin formularul de pe site sau prin WhatsApp. Vă contactăm pentru a programa o ședință de probă gratuită, unde elevul cunoaște profesorul și studioul. După probă, puteți alege cursul potrivit.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function FAQ() {
       {faqItems.map((item, i) => (
         <div
           key={i}
-          className="bg-night-light border border-border-dark overflow-hidden transition-colors hover:border-gold/30"
+          className="bg-night-light border border-border-dark overflow-hidden transition-colors hover:border-rose/30"
         >
           <button
             onClick={() => setOpen(open === i ? null : i)}
@@ -63,7 +63,7 @@ export default function FAQ() {
               {item.question}
             </span>
             <span
-              className={`text-gold text-xl shrink-0 transition-transform duration-300 ${
+              className={`text-rose text-xl shrink-0 transition-transform duration-300 ${
                 open === i ? "rotate-45" : ""
               }`}
             >

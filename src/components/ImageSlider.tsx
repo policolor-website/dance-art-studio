@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const sliderImages = [
-  { src: "/images/cabanele-rus/slider-rus-1.jpg", alt: "Exterior cabane cu grădină și peisaj montan" },
-  { src: "/images/cabanele-rus/slider-rus-2.jpg", alt: "Interior living cu design tradițional maramureșean" },
-  { src: "/images/cabanele-rus/slider-rus-3.jpg", alt: "Piscină și zonă de relaxare exterior" },
-  { src: "/images/cabanele-rus/slider-rus-4.jpg", alt: "Cabane cu curte și vegetație" },
-  { src: "/images/cabanele-rus/slider-rus-5.jpg", alt: "Detaliu interior cabană" },
+  { src: "/images/ballet/dancer-stage.jpg", alt: "Spectacol de balet pe scenă" },
+  { src: "/images/ballet/ballet-group.jpg", alt: "Dans de grup în spectacol" },
+  { src: "/images/ballet/ballet-bw.jpg", alt: "Poză artistică balerină" },
+  { src: "/images/ballet/ballet-jump.jpg", alt: "Săritură de balet" },
+  { src: "/images/ballet/ballet-girl.jpg", alt: "Curs de balet pentru copii" },
 ];
 
 export default function ImageSlider() {
@@ -40,13 +40,13 @@ export default function ImageSlider() {
     <section className="py-12 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-8">
-          <p className="text-gold text-sm font-semibold uppercase tracking-[0.3em] mb-4">
+          <p className="text-rose text-sm font-semibold uppercase tracking-[0.3em] mb-4">
             Galerie
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-cream">
-            Descoperă Cabanele Rus
+            Descoperă Dance Art Studio
           </h2>
-          <div className="w-24 h-px gold-line mx-auto mt-6" />
+          <div className="w-24 h-px rose-line mx-auto mt-6" />
         </div>
 
         <div className="relative overflow-hidden">
@@ -85,8 +85,8 @@ export default function ImageSlider() {
               onClick={() => setCurrent(i)}
               className={`h-2 rounded-full transition-all ${
                 current === i
-                  ? "w-8 bg-gold"
-                  : "w-2 bg-border-dark hover:bg-gold/50"
+                  ? "w-8 bg-rose"
+                  : "w-2 bg-border-dark hover:bg-rose/50"
               }`}
               aria-label={`Slide ${i + 1}`}
             />

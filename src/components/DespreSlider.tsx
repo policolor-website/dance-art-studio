@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const sliderImages = [
-  { src: "/images/cabanele-rus/hotel-38291929.jpg", alt: "Exterior cabană" },
-  { src: "/images/cabanele-rus/hotel-38291928.jpg", alt: "Interior living" },
-  { src: "/images/cabanele-rus/hotel-38291944.jpg", alt: "Peisaj montan" },
-  { src: "/images/cabanele-rus/camera-12415487.jpg", alt: "Camera dublă family" },
-  { src: "/images/cabanele-rus/camera-12415470.jpg", alt: "Camera dublă la etaj" },
+  { src: "/images/ballet/dancer-stage.jpg", alt: "Spectacol de balet" },
+  { src: "/images/ballet/ballet-group.jpg", alt: "Dans de grup" },
+  { src: "/images/ballet/ballet-bw.jpg", alt: "Poză artistică balet" },
+  { src: "/images/ballet/ballet-girl.jpg", alt: "Curs pentru copii" },
+  { src: "/images/ballet/ballet-jump.jpg", alt: "Săritură de balet" },
 ];
 
 export default function DespreSlider() {
@@ -47,7 +47,7 @@ export default function DespreSlider() {
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-1.5 rounded-full transition-all duration-300 ${
-              current === i ? "w-6 bg-gold" : "w-1.5 bg-cream/40 hover:bg-cream/60"
+              current === i ? "w-6 bg-rose" : "w-1.5 bg-cream/40 hover:bg-cream/60"
             }`}
             aria-label={`Slide ${i + 1}`}
           />

@@ -1,33 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-night: #0a0a0a;
-  --color-night-light: #141414;
-  --color-night-lighter: #1c1c1c;
-  --color-gold: #c9a961;
-  --color-gold-light: #e0c280;
-  --color-gold-dark: #a88a4a;
-  --color-cream: #f5f0e8;
-  --color-muted: #8a8a8a;
-  --color-border-dark: #2a2a2a;
+  --color-night: #4a3540;
+  --color-night-light: #5a4250;
+  --color-night-lighter: #6a5060;
+  --color-rose: #d99aa6;
+  --color-rose-light: #e8b8c2;
+  --color-rose-dark: #c97a8a;
+  --color-gold: #d4b878;
+  --color-gold-light: #e0c890;
+  --color-gold-dark: #b8985a;
+  --color-cream: #faf5f2;
+  --color-muted: #b8a0a8;
+  --color-border-dark: #6a5060;
 
   --font-display: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f0e8;
+  --background: #4a3540;
+  --foreground: #faf5f2;
 }
 
 body {
   background:
-    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(201, 169, 97, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201, 169, 97, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 80% at 50% 50%, rgba(201, 169, 97, 0.08) 0%, transparent 70%),
-    #0a0a0a;
+    radial-gradient(ellipse 90% 60% at 50% 0%, rgba(217, 154, 166, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(212, 184, 120, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 50% 50%, rgba(217, 154, 166, 0.08) 0%, transparent 70%),
+    #4a3540;
   background-attachment: fixed;
-  color: #f5f0e8;
+  color: #faf5f2;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
@@ -36,10 +39,10 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #4a3540;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c9a961;
+  background: #d99aa6;
   border-radius: 4px;
 }
 
@@ -87,14 +90,21 @@ body {
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #c9a961 0%, #e0c280 50%, #c9a961 100%);
+  background: linear-gradient(135deg, #d99aa6 0%, #e8b8c2 50%, #d4b878 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-rose {
+  background: linear-gradient(135deg, #d99aa6 0%, #e8b8c2 50%, #d99aa6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .hero-overlay {
-  background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 60%, rgba(10,10,10,0.95) 100%);
+  background: linear-gradient(180deg, rgba(74,53,64,0.2) 0%, rgba(74,53,64,0.6) 60%, rgba(74,53,64,0.92) 100%);
 }
 
 .card-hover {
@@ -102,11 +112,15 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(201, 169, 97, 0.15);
+  box-shadow: 0 20px 40px rgba(217, 154, 166, 0.2);
 }
 
 .gold-line {
-  background: linear-gradient(90deg, transparent, #c9a961, transparent);
+  background: linear-gradient(90deg, transparent, #d99aa6, transparent);
+}
+
+.rose-line {
+  background: linear-gradient(90deg, transparent, #d99aa6, transparent);
 }
 
 @keyframes pop-in {
@@ -130,15 +144,15 @@ body {
 }
 
 .rdp-dark {
-  --rdp-accent-color: #c9a961;
-  --rdp-background-color: #1a1a1a;
+  --rdp-accent-color: #d99aa6;
+  --rdp-background-color: #5a4250;
   --rdp-day-width: 32px;
   --rdp-day-height: 32px;
 }
 .rdp-dark .rdp-day_button {
   width: 32px;
   height: 32px;
-  color: #f5f5dc;
+  color: #faf5f2;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -147,30 +161,30 @@ body {
   border-radius: 4px;
 }
 .rdp-dark .rdp-day_button:hover {
-  background: rgba(201, 169, 97, 0.2);
-  color: #c9a961;
+  background: rgba(217, 154, 166, 0.2);
+  color: #d99aa6;
 }
 .rdp-dark .rdp-selected .rdp-day_button {
-  background: #c9a961;
-  color: #0a0a0a;
+  background: #d99aa6;
+  color: #4a3540;
   font-weight: 700;
 }
 .rdp-dark .rdp-today .rdp-day_button {
-  border: 1px solid #c9a961;
-  color: #c9a961;
+  border: 1px solid #d99aa6;
+  color: #d99aa6;
 }
 .rdp-dark .rdp-disabled .rdp-day_button {
-  color: #444;
+  color: #777;
   cursor: not-allowed;
   text-decoration: line-through;
 }
 .rdp-dark .rdp-outside .rdp-day_button {
-  color: #555;
+  color: #888;
 }
 .rdp-dark .rdp-chevron {
-  fill: #c9a961;
+  fill: #d99aa6;
   cursor: pointer;
 }
 .rdp-dark .rdp-chevron:hover {
-  fill: #e0c280;
+  fill: #e8b8c2;
 }

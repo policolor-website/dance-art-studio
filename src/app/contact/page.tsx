@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="relative text-center mb-12 py-16">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="/images/cabanele-rus/hotel-38291927.jpg"
+              src="/images/ballet/ballet-white.jpg"
               alt=""
               fill
               className="object-cover opacity-10"
@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <h1 className="font-display text-5xl font-bold text-cream mb-4">Contact</h1>
             <p className="text-muted text-lg">Suntem aici pentru tine</p>
-            <div className="w-24 h-px gold-line mx-auto mt-6" />
+            <div className="w-24 h-px rose-line mx-auto mt-6" />
           </div>
         </div>
 
@@ -42,39 +42,39 @@ export default function ContactPage() {
             </h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 border border-gold rounded-full flex items-center justify-center text-gold text-xl shrink-0">
+                <div className="w-12 h-12 border border-rose rounded-full flex items-center justify-center text-rose text-xl shrink-0">
                   📞
                 </div>
                 <div>
                   <p className="text-muted text-xs uppercase tracking-wider mb-1">Telefon</p>
-                  <a href="tel:0758660941" className="text-cream hover:text-gold no-underline transition-colors">
+                  <a href="tel:0758660941" className="text-cream hover:text-rose no-underline transition-colors">
                     0758 660 941
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 border border-gold rounded-full flex items-center justify-center text-gold text-xl shrink-0">
+                <div className="w-12 h-12 border border-rose rounded-full flex items-center justify-center text-rose text-xl shrink-0">
                   ✉
                 </div>
                 <div>
                   <p className="text-muted text-xs uppercase tracking-wider mb-1">Email</p>
-                  <a href="https://www.facebook.com/cabanelerus" target="_blank" rel="noopener noreferrer" className="text-cream hover:text-gold no-underline transition-colors">
-                    facebook.com/cabanelerus
+                  <a href="mailto:contact@danceartstudio.ro" className="text-cream hover:text-rose no-underline transition-colors">
+                    contact@danceartstudio.ro
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 border border-gold rounded-full flex items-center justify-center text-gold text-xl shrink-0">
+                <div className="w-12 h-12 border border-rose rounded-full flex items-center justify-center text-rose text-xl shrink-0">
                   📍
                 </div>
                 <div>
                   <p className="text-muted text-xs uppercase tracking-wider mb-1">Adresă</p>
-                  <p className="text-cream">Strada Principală nr. 266, Budești, Maramureș, România</p>
+                  <p className="text-cream">Strada Artei nr. 12, București, România</p>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Budesti+Maramures+Romania"
+                    href="https://www.google.com/maps/search/?api=1&query=Bucuresti+Romania"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gold text-sm hover:text-gold-light no-underline transition-colors"
+                    className="text-rose text-sm hover:text-rose-light no-underline transition-colors"
                   >
                     Vezi pe hartă →
                   </a>
@@ -84,28 +84,28 @@ export default function ContactPage() {
 
             <div className="mt-8 relative aspect-video overflow-hidden border border-border-dark">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.123456789!2d25.3547!3d47.3456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4736f00000000000%3A0x0!2sVatra%20Dornei!5e0!3m2!1sro!2sro!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.347289999999!2d26.1025!3d44.4268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff3a1c5b6b6f%3A0x0!2sBucurești!5e0!3m2!1sro!2sro!4v1700000000000"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg)" }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Cabanele Rus Budești pe hartă"
+                title="Dance Art Studio pe hartă"
               />
             </div>
           </div>
 
           <div>
             {submitted ? (
-              <div className="bg-night-light border border-gold p-8 text-center">
+              <div className="bg-night-light border border-rose p-8 text-center">
                 <div className="text-4xl mb-4">✓</div>
-                <h2 className="text-gold font-semibold text-xl mb-2">Mesaj trimis!</h2>
+                <h2 className="text-rose font-semibold text-xl mb-2">Mesaj trimis!</h2>
                 <p className="text-cream/80 text-sm">
                   Vă vom răspunde în cel mai scurt timp.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 text-muted hover:text-gold text-xs underline border-0 bg-transparent cursor-pointer"
+                  className="mt-4 text-muted hover:text-rose text-xs underline border-0 bg-transparent cursor-pointer"
                 >
                   Trimite alt mesaj
                 </button>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-gold focus:outline-none transition-colors"
+                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-gold focus:outline-none transition-colors"
+                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-gold focus:outline-none transition-colors"
+                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -152,12 +152,12 @@ export default function ContactPage() {
                       onChange={(e) => setMessage(e.target.value)}
                       required
                       rows={5}
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-gold focus:outline-none transition-colors resize-none"
+                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors resize-none"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-gold text-night text-sm font-semibold uppercase tracking-wider transition-all hover:bg-gold-light cursor-pointer border-0"
+                    className="w-full px-6 py-4 bg-rose text-night text-sm font-semibold uppercase tracking-wider transition-all hover:bg-rose-light cursor-pointer border-0"
                   >
                     Trimite mesajul
                   </button>

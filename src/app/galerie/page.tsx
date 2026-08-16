@@ -7,9 +7,9 @@ import Reveal from "@/components/Reveal";
 
 const tabs: { key: GalleryCategory; label: string }[] = [
   { key: "toate", label: "Toate" },
-  { key: "camere", label: "Camere" },
-  { key: "exterior", label: "Exterior" },
-  { key: "facilitati", label: "Facilități" },
+  { key: "spectacole", label: "Spectacole" },
+  { key: "repetitii", label: "Repetiții" },
+  { key: "studio", label: "Studio" },
 ];
 
 export default function GalleryPage() {
@@ -26,7 +26,7 @@ export default function GalleryPage() {
         <div className="relative text-center mb-12 py-16">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="/images/cabanele-rus/hotel-38291926.jpg"
+              src="/images/ballet/dancer-stage.jpg"
               alt=""
               fill
               className="object-cover opacity-10"
@@ -34,8 +34,8 @@ export default function GalleryPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <h1 className="font-display text-5xl font-bold text-cream mb-4">Galerie</h1>
-            <p className="text-muted text-lg">Cabanele Rus · Budești Maramureș</p>
-            <div className="w-24 h-px gold-line mx-auto mt-6" />
+            <p className="text-muted text-lg">Dance Art Studio</p>
+            <div className="w-24 h-px rose-line mx-auto mt-6" />
           </div>
         </div>
 
@@ -49,8 +49,8 @@ export default function GalleryPage() {
               onClick={() => setActiveTab(tab.key)}
               className={`px-6 py-2.5 text-sm font-semibold uppercase tracking-wider transition-all border ${
                 activeTab === tab.key
-                  ? "bg-gold text-night border-gold"
-                  : "bg-transparent text-cream border-border-dark hover:border-gold hover:text-gold"
+                  ? "bg-rose text-night border-rose"
+                  : "bg-transparent text-cream border-border-dark hover:border-rose hover:text-rose"
               }`}
             >
               {tab.label}
@@ -91,7 +91,7 @@ export default function GalleryPage() {
         >
           <button
             onClick={() => setLightbox(null)}
-            className="absolute top-6 right-6 text-cream hover:text-gold text-3xl bg-transparent border-0 cursor-pointer"
+            className="absolute top-6 right-6 text-cream hover:text-rose text-3xl bg-transparent border-0 cursor-pointer"
           >
             ✕
           </button>

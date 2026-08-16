@@ -1,456 +1,300 @@
-export interface Room {
+export interface Course {
   slug: string;
   name: string;
-  cabinSlug: string;
+  ageRange: string;
+  level: string;
+  duration: string;
+  schedule: string;
   price: number;
-  size: number;
-  capacity: string;
-  beds: string;
-  baths: number;
   image: string;
   gallery: string[];
   description: string;
-  facilities: string[];
+  curriculum: string[];
 }
 
-export interface Cabin {
+export interface Teacher {
   slug: string;
   name: string;
-  description: string;
+  role: string;
   image: string;
-  gallery: string[];
-  capacity: string;
-  roomsCount: number;
-  toilets: number;
-  showers: number;
-  features: string[];
+  bio: string;
+  achievements: string[];
 }
 
-export const cabins: Cabin[] = [
+export const courses: Course[] = [
   {
-    slug: "cabana-1",
-    name: "Cabana 1",
-    description: "Cabana 1 dispune de 3 camere duble la parter, 2 toalete, living cu canapea extensibilă și bucătărie proprie complet utilată. Ideală pentru familii sau grupuri mici.",
-    image: "/images/cabanele-rus/hotel-38291926.jpg",
+    slug: "ballet-babies",
+    name: "Ballet Bebeluși",
+    ageRange: "3-5 ani",
+    level: "Inițiere",
+    duration: "45 min",
+    schedule: "Sâmbătă 10:00",
+    price: 120,
+    image: "/images/ballet/ballet-girl.jpg",
     gallery: [
-      "/images/cabanele-rus/hotel-38291926.jpg",
-      "/images/cabanele-rus/hotel-38291928.jpg",
-      "/images/cabanele-rus/hotel-38291935.jpg",
-      "/images/cabanele-rus/hotel-38291945.jpg",
+      "/images/ballet/ballet-girl.jpg",
+      "/images/ballet/ballet-jump.jpg",
+      "/images/ballet/ballet-shoes.jpg",
     ],
-    capacity: "6 Persoane",
-    roomsCount: 3,
-    toilets: 2,
-    showers: 0,
-    features: [
-      "3 camere duble la parter",
-      "2 toalete",
-      "Living cu canapea extensibilă",
-      "Bucătărie complet utilată",
+    description:
+      "Cursul de Ballet Bebeluși introduce cei mici în lumea magică a baletului prin joc, muzică și mișcare. Copiii învață noțiuni de bază de coordonare, ritm și expresie corporală într-un mediu plăcut și sigur.\n\nOrele sunt concepute pentru a stimula imaginația și creativitatea, folosind povești și jocuri de rol care îi ajută să descopere bucuria mișcării. Accentul se pune pe dezvoltarea motricității fine, echilibrului și încrederii în sine.\n\nLa finalul anului, cei mici participă la un spectacol de gală unde prezintă familiei ce au învățat.",
+    curriculum: [
+      "Mișcare și ritm prin joc",
+      "Coordinare și echilibru",
+      "Exprimare corporală și mimică",
+      "Noțiuni de bază poziții balet",
+      "Povești dansate și imaginație",
+      "Spectacol de final de an",
     ],
   },
   {
-    slug: "cabana-2",
-    name: "Cabana 2",
-    description: "Cabana 2 este cea mai spațioasă, cu 2 camere triple cu pat extra-large, 2 camere duble la etaj cu pat matrimonial, 3 toalete, 2 dușuri, living mare cu două canapele extensibile și bucătărie proprie complet utilată.",
-    image: "/images/cabanele-rus/hotel-38291927.jpg",
+    slug: "ballet-copii",
+    name: "Ballet Copii",
+    ageRange: "6-9 ani",
+    level: "Începători",
+    duration: "60 min",
+    schedule: "Marți & Joi 17:00",
+    price: 180,
+    image: "/images/ballet/ballet-jump.jpg",
     gallery: [
-      "/images/cabanele-rus/hotel-38291927.jpg",
-      "/images/cabanele-rus/hotel-38291934.jpg",
-      "/images/cabanele-rus/hotel-38291948.jpg",
-      "/images/cabanele-rus/hotel-38291960.jpg",
+      "/images/ballet/ballet-jump.jpg",
+      "/images/ballet/ballet-group.jpg",
+      "/images/ballet/ballet-road.jpg",
     ],
-    capacity: "10 Persoane",
-    roomsCount: 4,
-    toilets: 3,
-    showers: 2,
-    features: [
-      "2 camere triple cu pat extra-large",
-      "2 camere duble la etaj cu pat matrimonial",
-      "3 toalete, 2 dușuri",
-      "Living mare cu două canapele extensibile",
-      "Bucătărie complet utilată",
+    description:
+      "Cursul de Ballet Copii este dedicat copiilor care doresc să învețe tehnica clasică de balet. Elevii descoperă pozițiile fundamentale, exercițiile la bară și în centru, într-un program structurat și progresiv.\n\nPe lângă tehnică, copiii învață disciplina, răbdarea și munca în echipă — valori esențiale dansului clasic. Orele combină exerciții tehnice cu momente creative și improvizatie.\n\nElevii participă la examene de nivel și la spectacole anuale, având ocazia să danseze pe scenă în fața publicului.",
+    curriculum: [
+      "Poziții fundamentale balet (I-V)",
+      "Exerciții la bară",
+      "Exerciții în centru",
+      "Sărituri și allegro",
+      "Flexibilitate și întinderi",
+      "Examene de nivel și spectacole",
     ],
   },
   {
-    slug: "cabana-3",
-    name: "Cabana 3",
-    description: "Cabana 3 oferă 4 camere duble cu pat matrimonial la etaj, living cu două canapele extensibile, bucătărie proprie complet utilată, 6 toalete și un duș.",
-    image: "/images/cabanele-rus/hotel-38291932.jpg",
+    slug: "ballet-adolescenti",
+    name: "Ballet Adolescenți",
+    ageRange: "10-14 ani",
+    level: "Intermediari",
+    duration: "90 min",
+    schedule: "Luni, Miercuri, Vineri 18:00",
+    price: 250,
+    image: "/images/ballet/dancer-stage.jpg",
     gallery: [
-      "/images/cabanele-rus/hotel-38291932.jpg",
-      "/images/cabanele-rus/hotel-38291933.jpg",
-      "/images/cabanele-rus/hotel-38291956.jpg",
-      "/images/cabanele-rus/hotel-38291961.jpg",
+      "/images/ballet/dancer-stage.jpg",
+      "/images/ballet/ballet-black-dress.jpg",
+      "/images/ballet/ballet-bw.jpg",
     ],
-    capacity: "8 Persoane",
-    roomsCount: 4,
-    toilets: 6,
-    showers: 1,
-    features: [
-      "4 camere duble cu pat matrimonial la etaj",
-      "Living cu două canapele extensibile",
-      "Bucătărie complet utilată",
-      "6 toalete, 1 duș",
+    description:
+      "Cursul de Ballet Adolescenți este destinat elevilor cu experiență care doresc să își perfecționeze tehnica și să aprofundeze studiul baletului clasic. Programul include tehnică avansată la bară, pointe, variații din repertoriul clasic și pregătire pentru competiții.\n\nElevii lucrează individual și în grup, dezvoltând atât tehnica cât și expresia artistică. Accentul se pune pe precizie, grație și interpretare.\n\nCursul include pregătire pentru examene internaționale și participare la competiții naționale și internaționale de balet.",
+    curriculum: [
+      "Tehnică avansată la bară și centru",
+      "Pointe (pentru elevii pregătiți)",
+      "Variații din repertoriu clasic",
+      "Pas de deux",
+      "Pregătire competiții și examene",
+      "Spectacole și gala anuală",
+    ],
+  },
+  {
+    slug: "ballet-adulti",
+    name: "Ballet Adulți",
+    ageRange: "18+ ani",
+    level: "Toate nivelurile",
+    duration: "75 min",
+    schedule: "Marți & Joi 19:30",
+    price: 200,
+    image: "/images/ballet/ballet-dancing.jpg",
+    gallery: [
+      "/images/ballet/ballet-dancing.jpg",
+      "/images/ballet/ballet-white.jpg",
+      "/images/ballet/ballet-shoes.jpg",
+    ],
+    description:
+      "Cursul de Ballet Adulți este destinat persoanelor care doresc să descopere sau să redescopere baletul, indiferent de nivel sau experiență anterioară. Orele combină tehnică clasică cu exerciții de flexibilitate și tonifiere.\n\nBaletul pentru adulți oferă multiple beneficii: îmbunătățirea posturii, tonifierea musculară, flexibilitate, coordonare și relaxare. Este o modalitate elegantă și plăcută de a face mișcare.\n\nNiciun nivel anterior nu este necesar — cursul se adaptează începătorilor dar și celor care au mai făcut balet în trecut.",
+    curriculum: [
+      "Tehnică clasică adaptată",
+      "Flexibilitate și postură",
+      "Tonifiere și condiție fizică",
+      "Exerciții la bară și centru",
+      "Coregrafii simple",
+      "Relaxare și well-being",
+    ],
+  },
+  {
+    slug: "ballet-avansati",
+    name: "Ballet Avansați / Pre-profesional",
+    ageRange: "14+ ani",
+    level: "Avansați",
+    duration: "120 min",
+    schedule: "Luni-Sâmbătă (program intens)",
+    price: 400,
+    image: "/images/ballet/ballet-bw.jpg",
+    gallery: [
+      "/images/ballet/ballet-bw.jpg",
+      "/images/ballet/ballet-black-dress.jpg",
+      "/images/ballet/dancer-stage.jpg",
+    ],
+    description:
+      "Programul Pre-profesional este destinat elevilor talentați care vizează o carieră în dans. Programul intensiv include tehnică avansată, pointe, repertoriu, pas de deux, dans contemporan și pregătire fizică specifică.\n\nElevii beneficiază de pregătire individualizată, participare la competiții internaționale și masterclass-uri cu invitați speciali. Programul este structurat pentru a pregăti elevii pentru audition-uri la companii și academii de balet.\n\nAdmiterea se face pe bază de audiție. Numărul de locuri este limitat.",
+    curriculum: [
+      "Tehnică avansată și pointe",
+      "Repertoriu clasic și neoclasic",
+      "Pas de deux și parteneriat",
+      "Dans contemporan",
+      "Pregătire fizică și nutriție",
+      "Audiții și competiții internaționale",
     ],
   },
 ];
 
-export function getCabinBySlug(slug: string): Cabin | undefined {
-  return cabins.find((c) => c.slug === slug);
+export function getCourseBySlug(slug: string): Course | undefined {
+  return courses.find((c) => c.slug === slug);
 }
 
-export function getRoomsByCabinSlug(cabinSlug: string): Room[] {
-  return rooms.filter((r) => r.cabinSlug === cabinSlug);
-}
-
-export const rooms: Room[] = [
+export const teachers: Teacher[] = [
   {
-    slug: "camera-dubla-1",
-    name: "Camera dublă 1",
-    cabinSlug: "cabana-1",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/camera-12415450.jpg",
-    gallery: [
-      "/images/cabanele-rus/camera-12415450.jpg",
-      "/images/cabanele-rus/hotel-38291936.jpg",
-      "/images/cabanele-rus/hotel-38291937.jpg",
+    slug: "fondatoare",
+    name: "Echipa Dance Art",
+    role: "Fondatoare & Profesor Principal",
+    image: "/images/ballet/dancer-stage.jpg",
+    bio: "Echipa Dance Art Studio este formată din profesioniști cu peste 15 ani de experiență în baletul clasic, care au dansat în producții naționale și internaționale înainte de a dedica viața predării.",
+    achievements: [
+      "Absolventă Academia de Balet",
+      "15+ ani experiență scenica",
+      "Certificare pedagogică balet",
+      "Membru al asociației profesionale de dans",
     ],
-    description:
-      "Camera dublă 1 este situată la parterul Cabanei 1, oferind acces facil și o atmosferă intimă. Camera dispune de pat matrimonial și baie comună cu duș.\n\nFiecare cameră beneficiază de WiFi gratuit, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Prosoape, halat de baie și uscător de păr sunt puse la dispoziție.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Bucătăria comună a cabanei este complet utilată.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
   },
   {
-    slug: "camera-dubla-2",
-    name: "Camera dublă 2",
-    cabinSlug: "cabana-1",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/hotel-38291936.jpg",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291936.jpg",
-      "/images/cabanele-rus/hotel-38291938.jpg",
-      "/images/cabanele-rus/hotel-38291939.jpg",
+    slug: "maria",
+    name: "Maria",
+    role: "Profesor Ballet Copii",
+    image: "/images/ballet/ballet-girl.jpg",
+    bio: "Maria specializează în predarea baletului pentru copii, cu o abordare prietenoasă și creativă. Are o pasiune deosebită pentru lucrul cu cei mici.",
+    achievements: [
+      "Absolventă Conservator de Dans",
+      "Specializare pedagogie copii",
+      "10+ ani experiență cu copii",
+      "Coregraf spectacole copii",
     ],
-    description:
-      "Camera dublă 2 este situată la parterul Cabanei 1, oferind acces facil și o atmosferă intimă. Camera dispune de pat matrimonial și baie comună cu duș.\n\nFiecare cameră beneficiază de WiFi gratuit, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Prosoape, halat de baie și uscător de păr sunt puse la dispoziție.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Bucătăria comună a cabanei este complet utilată.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
   },
   {
-    slug: "camera-dubla-3",
-    name: "Camera dublă 3",
-    cabinSlug: "cabana-1",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/hotel-38291937.jpg",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291937.jpg",
-      "/images/cabanele-rus/hotel-38291938.jpg",
-      "/images/cabanele-rus/hotel-38291939.jpg",
+    slug: "alexandra",
+    name: "Alexandra",
+    role: "Profesor Pointe & Repertoriu",
+    image: "/images/ballet/ballet-black-dress.jpg",
+    bio: "Alexandra este specialist în tehnică pointe și repertoriu clasic. A fost prim-balerină și predă tehnica avansată elevilor care vizează performanța.",
+    achievements: [
+      "Prim-balerină companie națională",
+      "Specializare pointe și repertoriu",
+      "Masterclass-uri internaționale",
+      "Juriu competiții de balet",
     ],
-    description:
-      "Camera dublă 3 este situată la parterul Cabanei 1, oferind acces facil și o atmosferă intimă. Camera dispune de pat matrimonial și baie comună cu duș.\n\nFiecare cameră beneficiază de WiFi gratuit, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Prosoape, halat de baie și uscător de păr sunt puse la dispoziție.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Bucătăria comună a cabanei este complet utilată.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-tripla-1",
-    name: "Camera triplă 1",
-    cabinSlug: "cabana-2",
-    price: 100,
-    size: 18,
-    capacity: "3 Persoane",
-    beds: "Pat extra-large",
-    baths: 1,
-    image: "/images/cabanele-rus/camera-12415479.jpg",
-    gallery: [
-      "/images/cabanele-rus/camera-12415479.jpg",
-      "/images/cabanele-rus/hotel-38291958.jpg",
-      "/images/cabanele-rus/hotel-38291946.jpg",
-    ],
-    description:
-      "Camera triplă 1 cu pat extra-large, situată în Cabana 2. Spațioasă și luminoasă, perfectă pentru familii sau grupuri.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Living mare cu două canapele extensibile.",
-    facilities: ["WiFi gratuit", "TV", "Pat extra-large", "Birou", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-tripla-2",
-    name: "Camera triplă 2",
-    cabinSlug: "cabana-2",
-    price: 100,
-    size: 18,
-    capacity: "3 Persoane",
-    beds: "Pat extra-large",
-    baths: 1,
-    image: "/images/cabanele-rus/camera-12415487.jpg",
-    gallery: [
-      "/images/cabanele-rus/camera-12415487.jpg",
-      "/images/cabanele-rus/hotel-38291947.jpg",
-      "/images/cabanele-rus/hotel-38291948.jpg",
-    ],
-    description:
-      "Camera triplă 2 cu pat extra-large, situată în Cabana 2. Spațioasă și luminoasă, perfectă pentru familii sau grupuri.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Living mare cu două canapele extensibile.",
-    facilities: ["WiFi gratuit", "TV", "Pat extra-large", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-dubla-etaj-c2-1",
-    name: "Camera dublă la etaj 1",
-    cabinSlug: "cabana-2",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/camera-12415459.jpg",
-    gallery: [
-      "/images/cabanele-rus/camera-12415459.jpg",
-      "/images/cabanele-rus/hotel-38291940.jpg",
-      "/images/cabanele-rus/hotel-38291941.jpg",
-    ],
-    description:
-      "Camera dublă la etaj 1 cu pat matrimonial, situată în Cabana 2. Oferă priveliște asupra grădinii și munților.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-dubla-etaj-c2-2",
-    name: "Camera dublă la etaj 2",
-    cabinSlug: "cabana-2",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/camera-12415464.jpg",
-    gallery: [
-      "/images/cabanele-rus/camera-12415464.jpg",
-      "/images/cabanele-rus/hotel-38291942.jpg",
-      "/images/cabanele-rus/hotel-38291943.jpg",
-    ],
-    description:
-      "Camera dublă la etaj 2 cu pat matrimonial, situată în Cabana 2. Oferă priveliște asupra grădinii și munților.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-dubla-etaj-c3-1",
-    name: "Camera dublă la etaj 1",
-    cabinSlug: "cabana-3",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/camera-12415470.jpg",
-    gallery: [
-      "/images/cabanele-rus/camera-12415470.jpg",
-      "/images/cabanele-rus/hotel-38291944.jpg",
-      "/images/cabanele-rus/hotel-38291945.jpg",
-    ],
-    description:
-      "Camera dublă la etaj 1 cu pat matrimonial, situată în Cabana 3. Oferă priveliște asupra grădinii și munților din jur.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Living cu două canapele extensibile.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-dubla-etaj-c3-2",
-    name: "Camera dublă la etaj 2",
-    cabinSlug: "cabana-3",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/hotel-38291938.jpg",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291938.jpg",
-      "/images/cabanele-rus/hotel-38291939.jpg",
-      "/images/cabanele-rus/hotel-38291954.jpg",
-    ],
-    description:
-      "Camera dublă la etaj 2 cu pat matrimonial, situată în Cabana 3. Oferă priveliște asupra grădinii și munților din jur.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Living cu două canapele extensibile.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-dubla-etaj-c3-3",
-    name: "Camera dublă la etaj 3",
-    cabinSlug: "cabana-3",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/hotel-38291940.jpg",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291940.jpg",
-      "/images/cabanele-rus/hotel-38291941.jpg",
-      "/images/cabanele-rus/hotel-38291955.jpg",
-    ],
-    description:
-      "Camera dublă la etaj 3 cu pat matrimonial, situată în Cabana 3. Oferă priveliște asupra grădinii și munților din jur.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Living cu două canapele extensibile.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
-  },
-  {
-    slug: "camera-dubla-etaj-c3-4",
-    name: "Camera dublă la etaj 4",
-    cabinSlug: "cabana-3",
-    price: 100,
-    size: 16,
-    capacity: "3 Persoane",
-    beds: "1 Pat matrimonial",
-    baths: 1,
-    image: "/images/cabanele-rus/hotel-38291941.jpg",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291941.jpg",
-      "/images/cabanele-rus/hotel-38291942.jpg",
-      "/images/cabanele-rus/hotel-38291956.jpg",
-    ],
-    description:
-      "Camera dublă la etaj 4 cu pat matrimonial, situată în Cabana 3. Oferă priveliște asupra grădinii și munților din jur.\n\nDispune de WiFi, TV, frigider, plită, cuptor cu microunde și ustensile de bucătărie complete. Baie comună cu duș.\n\nOaspeții au acces la piscină încălzită cu vedere, șemineu, terasă și grătar. Living cu două canapele extensibile.",
-    facilities: ["WiFi gratuit", "TV", "Pat matrimonial", "Frigider", "Plită", "Cuptor cu microunde", "Mașină de spălat rufe", "Mașină de spălat vase", "Aparat de cafea/ceai", "Prosoape", "Halat de baie", "Uscător de păr", "Plasă de țânțari", "Parchet", "Intrare privată", "Acces piscină încălzită", "Șemineu"],
   },
 ];
+
+export function getTeacherBySlug(slug: string): Teacher | undefined {
+  return teachers.find((t) => t.slug === slug);
+}
 
 export const facilities = [
-  { icon: "pool", label: "Piscină încălzită", desc: "Piscină cu vedere la munte" },
-  { icon: "hot_tub", label: "2 Ciubere încălzite", desc: "Jacuzzi exterior pentru relaxare" },
-  { icon: "fireplace", label: "Șemineu", desc: "Atmosferă caldă și intimă" },
-  { icon: "car", label: "Parcare gratuită", desc: "Parcare privată la fața locului" },
-  { icon: "wifi", label: "WiFi gratuit", desc: "Internet în toate spațiile" },
-  { icon: "garden", label: "Grădină 1,9 ha", desc: "Spațiu verde generos cu Valea Răchițele" },
-  { icon: "bbq", label: "Grătar & Ceaun", desc: "Grătar profesional, ceaun și disc" },
-  { icon: "kids", label: "Loc de joacă", desc: "Trambulină, tobogan, hamace" },
-  { icon: "pets", label: "Ponei & Husky", desc: "Chico și Zoro, plimbări pentru copii" },
-  { icon: "kitchen", label: "Bucătărie proprie", desc: "Complet utilată în fiecare cabană" },
-  { icon: "restaurant", label: "Restaurant", desc: "Hanu` lu` Cobâlă vis-a-vis" },
-  { icon: "archery", label: "Tir cu arcul", desc: "Săgeți cu vârf de oțel și badminton" },
+  { icon: "mirror", label: "Oglinzi profesionale", desc: "Oglinzi pe întreg peretele" },
+  { icon: "floor", label: "Parchet profesional", desc: "Parchet dans, rezistent" },
+  { icon: "barre", label: "Bare de balet", desc: "Bare reglabile pe două niveluri" },
+  { icon: "piano", label: "Pian live", desc: "Pianist acompaniator" },
+  { icon: "sound", label: "Sistem audio", desc: "Sistem audio profesional" },
+  { icon: "ac", label: "Aer condiționat", desc: "Climatizare pentru confort" },
+  { icon: "lockers", label: "Vestiar", desc: "Vestiar cu dulapuri individuale" },
+  { icon: "water", label: "Apă și refresh", desc: "Zonă de hidratare" },
+  { icon: "stage", label: "Scenă de repetiție", desc: "Mini-scenă pentru spectacole" },
+  { icon: "costumes", label: "Costume", desc: "Depozitare costume de scenă" },
+  { icon: "parking", label: "Parcare gratuită", desc: "Parcare pentru părinți" },
+  { icon: "wifi", label: "WiFi gratuit", desc: "Internet în toată școala" },
 ];
 
 export const reviews = [
   {
-    name: "Ion Burlan",
+    name: "Laura Popescu",
     rating: 5,
-    text: "Personal nota 10! Locație superba! Recomand cu toată încrederea! Vom reveni cu siguranță!",
+    text: "Fiica mea a crescut enorm de când vine la Dance Art Studio. Nu doar ca tehnică, dar și ca încredere în sine. Profesorii sunt extraordinari și cu multă pasiune!",
   },
   {
-    name: "Oaspete verificat",
+    name: "Andrei Mihalache",
     rating: 5,
-    text: "Mâncare excelentă, tradițională, gazde foarte ospitaliere. O experiență autentică în Maramureș!",
+    text: "Cea mai bună școală de balet din oraș. Atmosfera este caldă, profesională și copiii învață cu plăcere. Recomand cu toată încrederea!",
   },
   {
-    name: "Călător individual",
+    name: "Cristina Dumitrescu",
     rating: 5,
-    text: "Foarte relaxantă locația, nu ești deloc în aglomerație (rural), un loc unde te poți relaxa și încărca bateriile. Oamenii foarte primitori și deschiși la vorbă, de nota 10+. De mâncare chiar nu am ce să mai zic, TOP!",
+    text: "Fac cursul de adulți de 2 ani și m-am îndrăgostit de balet. M-am îmbunătățit postura, flexibilitatea și starea generală de spirit. O echipă minunată!",
   },
   {
-    name: "Familie cu copil mic",
+    name: "Mihaela Georgescu",
     rating: 5,
-    text: "Copiii s-au bucurat de ponei, trambulină și loc de joacă. Cabanele sunt curate, confortabile și au tot ce ai nevoie. Gazdele sunt minunate!",
+    text: "Spectacolul de final de an a fost absolut superb. Se vede munca și dedicația profesorilor. Suntem o familie a baletului aici.",
   },
   {
-    name: "Grup de prieteni",
+    name: "Radu Ionescu",
     rating: 5,
-    text: "Am închiriat integral și ne-am simțit excelent. Piscina, ciuberele și grătarul profesional au făcut minuni. Recomandăm pentru grupuri!",
+    text: "Fiica mea a fost admisă la Academia de Balet după pregătirea la Dance Art Studio. Programul pre-profesional este de un nivel excepțional. Mulțumim!",
   },
   {
-    name: "Cuplu tânăr",
+    name: "Elena Vasilescu",
     rating: 5,
-    text: "Un loc de poveste în inima Maramureșului. Șemineu, piscină cu vedere la munte și liniște deplină. Perfect pentru o escapadă romantică.",
+    text: "O școală unde copiii învață disciplina și arta cu bucurie. Comunicarea cu părinții este excelentă, iar progresul este vizibil. Recomand!",
   },
 ];
 
 export const blogPosts = [
   {
-    slug: "maramuresul-traditional-obiective-unesco",
-    title: "Maramureșul tradițional — Obiective UNESCO",
-    excerpt: "Biserica de lemn din Budești, unde se păstrează cămașa de zale a haiducului Pintea Viteazul, este doar unul dintre obiectivele UNESCO din zonă...",
-    image: "/images/cabanele-rus/hotel-38291944.jpg",
+    slug: "beneficiile-baletului-copii",
+    title: "Beneficiile baletului pentru copii",
+    excerpt: "Baletul dezvoltă nu doar corpul, dar și mintea. Descoperă cum dansul clasic ajută copiii să crească armonios — de la postură la încredere în sine...",
+    image: "/images/ballet/ballet-girl.jpg",
   },
   {
-    slug: "circuitul-turistic-cavnic-si-breb",
-    title: "Circuitul turistic Cavnic și Breb",
-    excerpt: "La doar 5 km de Cabanele Rus se află pârtiile de schi de la Cavnic și Casele Prințului Charles din Breb, introduse în circuitul turistic...",
-    image: "/images/cabanele-rus/hotel-38291930.jpg",
+    slug: "spectacol-gala-anuala",
+    title: "Gala anuală — Spectacol de balet",
+    excerpt: "Elevii Dance Art Studio au prezentat un spectacol excepțional la Gala Anuală. Coregrafii clasice și contemporane, costume și emoție pe scenă...",
+    image: "/images/ballet/dancer-stage.jpg",
   },
   {
-    slug: "bucurii-culinare-traditie-maramureseana",
-    title: "Bucurii culinare — Tradiție maramureșeană",
-    excerpt: "La Cabanele Rus se servește mic dejun, prânz și cină tradițională maramureșeană. Opțiuni All inclusive și Ultra All Inclusive disponibile...",
-    image: "/images/cabanele-rus/hotel-38291934.jpg",
+    slug: "scoaterea-papucilor-pointe",
+    title: "Ghid complet pentru pantofi pointe",
+    excerpt: "Când este momentul potrivit pentru a începe pointe? Ce trebuie să știi despre pantofii de pointe, pregătirea piciorului și selecția corectă...",
+    image: "/images/ballet/ballet-shoes.jpg",
   },
 ];
 
-export type GalleryCategory = "toate" | "camere" | "exterior" | "facilitati";
+export type GalleryCategory = "toate" | "spectacole" | "repetitii" | "studio";
 
 export interface GalleryImage {
   src: string;
-  category: "camere" | "exterior" | "facilitati";
+  category: "spectacole" | "repetitii" | "studio";
   title: string;
 }
 
 export const galleryImages: GalleryImage[] = [
-  // Exterior
-  { src: "/images/cabanele-rus/hotel-38291926.jpg", category: "exterior", title: "Exterior cabană cu piscină" },
-  { src: "/images/cabanele-rus/hotel-38291927.jpg", category: "exterior", title: "Fațada cu terasă" },
-  { src: "/images/cabanele-rus/hotel-38291932.jpg", category: "exterior", title: "Grădină cu cabană" },
-  { src: "/images/cabanele-rus/hotel-38291933.jpg", category: "exterior", title: "Vedere exterioară" },
-  { src: "/images/cabanele-rus/hotel-38291944.jpg", category: "exterior", title: "Vedere de sus" },
-  { src: "/images/cabanele-rus/hotel-38291951.jpg", category: "exterior", title: "Grădină cu ponei" },
-  { src: "/images/cabanele-rus/hotel-38291952.jpg", category: "exterior", title: "Câini Husky" },
-  { src: "/images/cabanele-rus/hotel-38291953.jpg", category: "exterior", title: "Peisaj natură" },
-  { src: "/images/cabanele-rus/hotel-38291954.jpg", category: "exterior", title: "Vedere cabană" },
-  { src: "/images/cabanele-rus/hotel-38291957.jpg", category: "exterior", title: "Exterior noaptea" },
-  { src: "/images/cabanele-rus/hotel-38291964.jpg", category: "exterior", title: "Grădină peisaj" },
-  { src: "/images/cabanele-rus/hotel-38291965.jpg", category: "exterior", title: "Exterior" },
-  // Interior
-  { src: "/images/cabanele-rus/hotel-38291928.jpg", category: "exterior", title: "Living cu șemineu" },
-  { src: "/images/cabanele-rus/hotel-38291934.jpg", category: "exterior", title: "Living / sală de mese" },
-  { src: "/images/cabanele-rus/hotel-38291935.jpg", category: "exterior", title: "Bucătărie" },
-  { src: "/images/cabanele-rus/hotel-38291945.jpg", category: "exterior", title: "Living cu canapea" },
-  { src: "/images/cabanele-rus/hotel-38291948.jpg", category: "exterior", title: "Bucătărie complet echipată" },
-  { src: "/images/cabanele-rus/hotel-38291955.jpg", category: "exterior", title: "Detalii decor" },
-  { src: "/images/cabanele-rus/hotel-38291956.jpg", category: "exterior", title: "Sală de mese" },
-  { src: "/images/cabanele-rus/hotel-38291960.jpg", category: "exterior", title: "Living zonă relaxare" },
-  { src: "/images/cabanele-rus/hotel-38291961.jpg", category: "exterior", title: "Bucătărie" },
-  // Camere
-  { src: "/images/cabanele-rus/camera-12415450.jpg", category: "camere", title: "Camera dublă la parter" },
-  { src: "/images/cabanele-rus/camera-12415459.jpg", category: "camere", title: "Camera dublă la etaj" },
-  { src: "/images/cabanele-rus/camera-12415464.jpg", category: "camere", title: "Camera dublă la etaj" },
-  { src: "/images/cabanele-rus/camera-12415470.jpg", category: "camere", title: "Camera dublă la etaj" },
-  { src: "/images/cabanele-rus/camera-12415479.jpg", category: "camere", title: "Camera dublă" },
-  { src: "/images/cabanele-rus/camera-12415487.jpg", category: "camere", title: "Camera dublă family" },
-  { src: "/images/cabanele-rus/camera-12415495.jpg", category: "camere", title: "Camera dublă family" },
-  { src: "/images/cabanele-rus/hotel-38291936.jpg", category: "camere", title: "Cameră dublă" },
-  { src: "/images/cabanele-rus/hotel-38291937.jpg", category: "camere", title: "Cameră dublă" },
-  { src: "/images/cabanele-rus/hotel-38291938.jpg", category: "camere", title: "Cameră cu vedere" },
-  { src: "/images/cabanele-rus/hotel-38291940.jpg", category: "camere", title: "Cameră dublă" },
-  { src: "/images/cabanele-rus/hotel-38291941.jpg", category: "camere", title: "Cameră etaj" },
-  { src: "/images/cabanele-rus/hotel-38291946.jpg", category: "camere", title: "Camera dublă family" },
-  { src: "/images/cabanele-rus/hotel-38291947.jpg", category: "camere", title: "Camera dublă family" },
-  { src: "/images/cabanele-rus/hotel-38291958.jpg", category: "camere", title: "Cameră dublă" },
-  { src: "/images/cabanele-rus/hotel-38291939.jpg", category: "camere", title: "Baie / duș" },
-  { src: "/images/cabanele-rus/hotel-38291959.jpg", category: "camere", title: "Baie / duș" },
-  // Facilități
-  { src: "/images/cabanele-rus/hotel-38291930.jpg", category: "facilitati", title: "Piscină cu vedere" },
-  { src: "/images/cabanele-rus/hotel-38291931.jpg", category: "facilitati", title: "Terasă cu mese" },
-  { src: "/images/cabanele-rus/hotel-38291942.jpg", category: "facilitati", title: "Terasă cu grătar" },
-  { src: "/images/cabanele-rus/hotel-38291943.jpg", category: "facilitati", title: "Piscină / jacuzzi" },
-  { src: "/images/cabanele-rus/hotel-38291949.jpg", category: "facilitati", title: "Terasă exterior" },
-  { src: "/images/cabanele-rus/hotel-38291950.jpg", category: "facilitati", title: "Piscină cu vedere" },
-  { src: "/images/cabanele-rus/hotel-38291962.jpg", category: "facilitati", title: "Terasă" },
-  { src: "/images/cabanele-rus/hotel-38291963.jpg", category: "facilitati", title: "Piscină" },
+  // Spectacole
+  { src: "/images/ballet/dancer-stage.jpg", category: "spectacole", title: "Spectacol de gală" },
+  { src: "/images/ballet/ballet-group.jpg", category: "spectacole", title: "Dans de grup pe scenă" },
+  { src: "/images/ballet/ballet-black-dress.jpg", category: "spectacole", title: "Solo pe scenă" },
+  { src: "/images/ballet/ballet-bw.jpg", category: "spectacole", title: "Moment artistic" },
+  { src: "/images/ballet/ballet-jump.jpg", category: "spectacole", title: "Săritură de balet" },
+  { src: "/images/ballet/ballet-dancing.jpg", category: "spectacole", title: "Performanță scenică" },
+  // Repetiții
+  { src: "/images/ballet/ballet-girl.jpg", category: "repetitii", title: "Repetiție cu cei mici" },
+  { src: "/images/ballet/ballet-white.jpg", category: "repetitii", title: "Pregătire repetiție" },
+  { src: "/images/ballet/ballet-road.jpg", category: "repetitii", title: "Exercițiu individual" },
+  // Studio
+  { src: "/images/ballet/ballet-shoes.jpg", category: "studio", title: "Pantofi de balet" },
+  { src: "/images/ballet/ballet-bw.jpg", category: "studio", title: "Studio — poză artistică" },
+  { src: "/images/ballet/dancer-stage.jpg", category: "studio", title: "Studio — pregătire" },
 ];
 
-export function getRoomBySlug(slug: string): Room | undefined {
-  return rooms.find((r) => r.slug === slug);
-}
-
-export interface Activity {
+export interface Event {
   slug: string;
   title: string;
   shortDescription: string;
@@ -460,121 +304,94 @@ export interface Activity {
   gallery: string[];
 }
 
-export const activities: Activity[] = [
+export const events: Event[] = [
   {
-    slug: "piscina-incalzita",
-    title: "Piscină încălzită cu vedere",
+    slug: "gala-anuala",
+    title: "Gala Anuală de Balet",
     shortDescription:
-      "Piscină exterioară încălzită cu vedere spectaculoasă la munte, disponibilă în toate sezoanele.",
+      "Spectacolul de final de an unde toți elevii școlii dansează pe scenă în fața familiei și prietenilor.",
     description:
-      "Bucurați-vă de o piscină exterioară încălzită cu vedere spectaculoasă la munții din Maramureș. Indiferent de sezon, piscina este locul ideal pentru relaxare după o zi de drumeție sau schi.\n\nPiscina este încălzită și disponibilă pe tot parcursul anului, oferind o experiență unică de relaxare în mijlocul naturii. Apa caldă și peisajul montan creează o atmosferă de neuitat.\n\nLângă piscină găsiți șezlonguri pentru relaxare și 2 ciubere exterioare încălzite (jacuzzi) pentru o experiență completă de wellness.",
-    image: "/images/cabanele-rus/hotel-38291930.jpg",
-    icon: "🏊",
+      "Gala Anuală este evenimentul cel mai așteptat al anului. Toți elevii Dance Art Studio, de la cei mici la avansați, urcă pe scenă și prezintă coregrafii pregătite pe parcursul anului.\n\nSpectacolul include variații clasice, coregrafii contemporane și momente speciale. Costumele, decorul și muzica sunt pregătite cu atenție pentru a oferi o experiență de neuitat.\n\nGala este o ocazie pentru elevi de a trăi emoția scenei și de a arăta progresul făcut. Este deschisă publicului și are loc într-o sală de spectacol profesională.",
+    image: "/images/ballet/dancer-stage.jpg",
+    icon: "🎭",
     gallery: [
-      "/images/cabanele-rus/hotel-38291930.jpg",
-      "/images/cabanele-rus/hotel-38291943.jpg",
-      "/images/cabanele-rus/hotel-38291950.jpg",
-      "/images/cabanele-rus/hotel-38291963.jpg",
+      "/images/ballet/dancer-stage.jpg",
+      "/images/ballet/ballet-group.jpg",
+      "/images/ballet/ballet-black-dress.jpg",
     ],
   },
   {
-    slug: "plimbari-cu-poneii",
-    title: "Plimbări cu poneii",
+    slug: "competitii-nationale",
+    title: "Competiții Naționale",
     shortDescription:
-      "Cei 2 ponei drăgălași, Chico și Zoro, vă așteaptă la plimbare. Distracție garantată pentru copii!",
+      "Elevii avansați participă la competiții naționale de balet, reprezentând Dance Art Studio.",
     description:
-      "Cei 2 ponei drăgălași, Chico și Zoro, vă așteaptă la plimbare pe proprietatea de 1,9 ha. Copiii se pot bucura de plimbări cu poneii în siguranță, sub supravegherea gazdelor.\n\nPoneii sunt blânzi și prietenoși, perfecți pentru copii de toate vârstele. Plimbările cu poneii sunt o activitate care aduce bucurie și zâmbete, creând amintiri de neuitat.\n\nPe lângă ponei, pe proprietate găsiți și 2 câini Husky prietenoși, care completează experiența rurală autentică.",
-    image: "/images/cabanele-rus/hotel-38291951.jpg",
-    icon: "�",
+      "Elevii din programul pre-profesional participă la competiții naționale de balet, unde sunt evaluați de jurați internaționali. Competițiile oferă ocazia de a compara nivelul tehnic, de a câștiga experiență scenică și de a face vizibilitate.\n\nPregătirea pentru competiții este intensivă și include repetiții individuale, coregrafii personalizate și pregătire psihologică. Elevii noștri au obținut numeroase premii și mențiuni de-a lungul anilor.\n\nParticiparea la competiții este opțională și se face pe bază de selecție.",
+    image: "/images/ballet/ballet-bw.jpg",
+    icon: "🏆",
     gallery: [
-      "/images/cabanele-rus/hotel-38291951.jpg",
-      "/images/cabanele-rus/hotel-38291952.jpg",
+      "/images/ballet/ballet-bw.jpg",
+      "/images/ballet/ballet-jump.jpg",
     ],
   },
   {
-    slug: "curse-cu-sanii-trase-de-husky",
-    title: "Curse cu sanii trase de Husky",
+    slug: "masterclass",
+    title: "Masterclass-uri cu invitați",
     shortDescription:
-      "La doar 2 minute de cabanele noastre se organizează curse cu sanii trase de câini Husky.",
+      "Masterclass-uri susținute de balerini și coregrafi invitați din companii naționale și internaționale.",
     description:
-      "La doar 2 minute de cabanele noastre se organizează curse cu sanii trase de câini Husky. O experiență unică în Maramureș, perfectă pentru iubitorii de animale și de aventură.\n\nCâinii Husky sunt dresați pentru a trage sania și oferă o experiență plină de adrenalină și distracție. Activitatea este disponibilă în sezonul de iarnă, când zăpada acoperă peisajul maramureșean.\n\nPe proprietate avem propriii noștri câini Husky prietenoși, pe care îi puteți cunoaște și mângâia.",
-    image: "/images/cabanele-rus/hotel-38291952.jpg",
-    icon: "�",
+      "Pe parcursul anului, Dance Art Studio organizează masterclass-uri cu invitați speciali — balerini, coregrafi și pedagogi din companii naționale și internaționale.\n\nMasterclass-urile oferă elevilor ocazia unică de a învăța de la profesioniști cu experiență scenică, de a descoperi stiluri diferite și de a primi feedback personalizat. Sunt deschise atât elevilor școlii cât și dansatorilor externi.\n\nProgramul masterclass-urilor este anunțat în avans și necesită înscriere separată.",
+    image: "/images/ballet/ballet-black-dress.jpg",
+    icon: "✨",
     gallery: [
-      "/images/cabanele-rus/hotel-38291952.jpg",
-      "/images/cabanele-rus/hotel-38291953.jpg",
+      "/images/ballet/ballet-black-dress.jpg",
+      "/images/ballet/dancer-stage.jpg",
     ],
   },
   {
-    slug: "schi-cavnic",
-    title: "Schi la Cavnic",
+    slug: "examene-nivel",
+    title: "Examene de Nivel",
     shortDescription:
-      "La numai 10 minute de noi se găsesc pârtiile de ski de la Cavnic (5 km).",
+      "Examene recunoscute internațional care atestă nivelul tehnic al elevilor noștri.",
     description:
-      "La numai 10 minute de cabanele noastre se găsesc pârtiile de ski de la Cavnic, la 5 km distanță. Pârtiile oferă trasee de dificultate variată, de la începători la avansați.\n\nSezonul de schi se întinde de obicei din decembrie până în martie, iar echipament de schi poate fi închiriat la fața locului. Pârtiile din Cavnic sunt ideale pentru familii și grupuri de prieteni.\n\nDupă o zi pe pârtie, reveniți la cabane pentru a vă relaxa la piscină încălzită sau la ciuberele exterioare.",
-    image: "/images/cabanele-rus/hotel-38291944.jpg",
-    icon: "⛷️",
+      "Dance Art Studio pregătește elevii pentru examene de nivel recunoscute internațional, care atestă competența tehnică în baletul clasic. Examenele sunt susținute în fața unui juriu extern și oferă o recunoaștere oficială a nivelului atins.\n\nPregătirea pentru examene este structurată și progresiv, urmărind un syllabus recunoscut. Elevii care promovează examenele primesc certificat și diplomă.\n\nExamenele sunt opționale și se adresează elevilor care doresc o recunoaștere oficială a pregătirii lor.",
+    image: "/images/ballet/ballet-shoes.jpg",
+    icon: "📜",
     gallery: [
-      "/images/cabanele-rus/hotel-38291944.jpg",
-      "/images/cabanele-rus/hotel-38291954.jpg",
+      "/images/ballet/ballet-shoes.jpg",
+      "/images/ballet/ballet-white.jpg",
     ],
   },
   {
-    slug: "drumeții-creasta-cocosului",
-    title: "Drumeție pe Creasta Cocoșului",
+    slug: "tabara-balet",
+    title: "Tabără de Balet",
     shortDescription:
-      "Traseu montan spectaculos în Munții Gutinului — Creasta Cocoșului, o aventură de neuitat.",
+      "Tabără de vară intensivă cu program de balet, dans contemporan și activități recreative.",
     description:
-      "Creasta Cocoșului din Munții Gutinului este un traseu montan spectaculos, care oferă priveliști panoramice unice asupra Maramureșului. Traseul este potrivit pentru drumeți cu experiență și oferă peisaje de o frumusețe rară.\n\nDrumeția pe Creasta Cocoșului te poartă prin formațiuni stâncoase unice, păduri de conifere și pajiști alpine. Este o experiență care îmbină efortul fizic cu recompensa peisagistică extraordinară.\n\nRecomandăm echipament adecvat de munte, apă și o cameră foto pentru a imortaliza peisajele spectaculoase.",
-    image: "/images/cabanele-rus/hotel-38291953.jpg",
-    icon: "🥾",
+      "Tabăra de Balet Dance Art Studio este un program de vară intensiv care combină pregătirea tehnică de balet cu dans contemporan, stretching, workshops și activități recreative.\n\nTabăra este deschisă elevilor de toate vârstele și nivelurile. Programul zilnic include cursuri de tehnică, coregrafii, improvisație și momente de relaxare. Este o ocazie excelentă pentru a progresa rapid într-un mediu prietenos și motivant.\n\nTabăra are loc în luna iulie și necesită înscriere anticipată. Locurile sunt limitate.",
+    image: "/images/ballet/ballet-girl.jpg",
+    icon: "☀️",
     gallery: [
-      "/images/cabanele-rus/hotel-38291953.jpg",
-      "/images/cabanele-rus/hotel-38291954.jpg",
+      "/images/ballet/ballet-girl.jpg",
+      "/images/ballet/ballet-jump.jpg",
     ],
   },
   {
-    slug: "calarie-casa-pascu",
-    title: "Călărie — Centrul Casa Pașcu",
+    slug: "spectacol-craciun",
+    title: "Spectacol de Crăciun",
     shortDescription:
-      "Centrul de Călărie Casa Pașcu la doar 1 km de cabanele noastre.",
+      "Spectacol tematic de Crăciun cu coregrafii speciale și momente festive.",
     description:
-      "Centrul de Călărie Casa Pașcu, situat la doar 1 km de cabanele noastre, oferă lecții de călărie pentru începători și plimbări organizate pentru cei mai experimentați.\n\nCaii sunt docili și bine dresați, perfecți pentru explorarea traseelor montane din jurul Budeștiului. Plimbările călare te duc prin peisaje spectaculoase, pe poteci forestiere și prin poieni cu flori sălbatice.\n\nEste o experiență unică care îmbină dragostea pentru animale cu pasiunea pentru natură și aventură.",
-    image: "/images/cabanele-rus/hotel-38291951.jpg",
-    icon: "🐎",
+      "Spectacolul de Crăciun este un eveniment tradițional al Dance Art Studio, unde elevii prezintă coregrafii inspirate din sezonul festiv. De la Spărgătorul de Nuci la momente originale, spectacolul aduce magia sărbătorilor pe scenă.\n\nSpectacolul este deschis publicului și are loc în luna decembrie. Elevii lucrează la coregrafii speciale începând din toamnă, iar costumele și decorurile sunt pregătite tematic.\n\nEste un eveniment cu intrare liberă pentru familie și prieteni, care încheie anul cu magie și emoție.",
+    image: "/images/ballet/ballet-white.jpg",
+    icon: "🎄",
     gallery: [
-      "/images/cabanele-rus/hotel-38291951.jpg",
-    ],
-  },
-  {
-    slug: "bazine-apă-sarată-ocna-șugatag",
-    title: "Bazine cu apă sărată — Ocna Șugatag",
-    shortDescription:
-      "La 13 km de cabanele noastre, bazinele cu apă sărată de la Ocna Șugatag.",
-    description:
-      "La doar 13 km de cabanele noastre se află bazinele cu apă sărată de la Ocna Șugatag. Apa sărată are proprietăți terapeutice recunoscute, fiind ideală pentru relaxare și tratament.\n\nBazinele oferă o experiență de relaxare completă, cu apă sărată încălzită și un cadru natural spectaculos. Este locul perfect pentru a vă relaxa după o zi de explorat Maramureșul.\n\nOcna Șugatag este o stațiune balneară renumită, cu o tradiție îndelungată în tratamente cu apă sărată.",
-    image: "/images/cabanele-rus/hotel-38291943.jpg",
-    icon: "💧",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291943.jpg",
-      "/images/cabanele-rus/hotel-38291950.jpg",
-    ],
-  },
-  {
-    slug: "izvor-borcut",
-    title: "Izvor BORCUT — Apă minerală",
-    shortDescription:
-      "La 0,8 km, un izvor din care țâșnește apă minerală carbogazoasă cu numeroase beneficii pentru organism.",
-    description:
-      "La doar 0,8 km de cabanele noastre se află izvorul BORCUT, din care țâșnește apă minerală carbogazoasă cu numeroase beneficii pentru organism.\n\nApă minerală proaspătă, direct din sursă, este o atracție pentru turiștii care apreciază calitatea și puritatea naturii. Izvorul BORCUT este cunoscut pentru proprietățile sale terapeutice și pentru gustul unic al apei carbogazoase naturale.\n\nO plimbare scurtă până la izvor este o activitate plăcută pentru toți oaspeții, oferind și ocazia de a admira peisajul rural din Budești.",
-    image: "/images/cabanele-rus/hotel-38291953.jpg",
-    icon: "🌊",
-    gallery: [
-      "/images/cabanele-rus/hotel-38291953.jpg",
+      "/images/ballet/ballet-white.jpg",
+      "/images/ballet/dancer-stage.jpg",
     ],
   },
 ];
 
-export function getActivityBySlug(slug: string): Activity | undefined {
-  return activities.find((a) => a.slug === slug);
+export function getEventBySlug(slug: string): Event | undefined {
+  return events.find((e) => e.slug === slug);
 }

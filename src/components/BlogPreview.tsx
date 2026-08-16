@@ -8,13 +8,13 @@ export default function BlogPreview() {
     <section className="py-24 bg-night-light">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="text-center mb-16">
-          <p className="text-gold text-sm font-semibold uppercase tracking-[0.3em] mb-4">
+          <p className="text-rose text-sm font-semibold uppercase tracking-[0.3em] mb-4">
             Noutăți
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-cream">
-            Descoperă zona
+            De pe blogul nostru
           </h2>
-          <div className="w-24 h-px gold-line mx-auto mt-6" />
+          <div className="w-24 h-px rose-line mx-auto mt-6" />
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -30,11 +30,11 @@ export default function BlogPreview() {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-night/80 to-transparent" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-cream mb-2 group-hover:text-gold transition-colors">
+                <h3 className="font-display text-xl font-bold text-cream mb-2 group-hover:text-rose transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-muted text-sm">{post.excerpt}</p>
-                <span className="text-gold text-sm font-semibold mt-3 inline-block">
+                <span className="text-rose text-sm font-semibold mt-3 inline-block">
                   Vezi tot →
                 </span>
               </Link>

@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Acasă" },
   { href: "/despre-noi", label: "Despre noi" },
-  { href: "/cabane", label: "Cazare" },
+  { href: "/cursuri", label: "Cursuri" },
   { href: "/galerie", label: "Galerie" },
-  { href: "/agrement", label: "Agrement" },
+  { href: "/evenimente", label: "Evenimente" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -29,7 +29,7 @@ export default function Navbar() {
 
   const linkClass = (active: boolean) =>
     `text-sm font-medium tracking-wide no-underline transition-colors ${
-      active ? "text-gold" : "text-cream hover:text-gold"
+      active ? "text-rose" : "text-cream hover:text-rose"
     }`;
 
   return (
@@ -42,14 +42,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link href="/" onClick={closeMobile} className="no-underline flex items-center">
-          <Image
-            src="/images/logo-cabanele-rus-nou.png"
-            alt="Cabanele Rus"
-            width={240}
-            height={80}
-            className="h-20 w-auto"
-            priority
-          />
+          <span className="font-display text-2xl font-bold text-cream">
+            Dance Art <span className="text-rose">·</span> <span className="text-gradient-rose">Studio</span>
+          </span>
         </Link>
 
         <ul className="hidden md:flex gap-8 list-none items-center">
@@ -66,10 +61,10 @@ export default function Navbar() {
         </ul>
 
         <Link
-          href="/cabane"
-          className="hidden md:inline-block px-6 py-2.5 bg-gold text-night text-sm font-semibold tracking-wide no-underline transition-all hover:bg-gold-light"
+          href="/inscriere"
+          className="hidden md:inline-block px-6 py-2.5 bg-rose text-night text-sm font-semibold tracking-wide no-underline transition-all hover:bg-rose-light"
         >
-          Rezervă acum
+          Înscrie-te
         </Link>
 
         <button
@@ -92,18 +87,18 @@ export default function Navbar() {
                 href={link.href}
                 onClick={closeMobile}
                 className={`py-3 text-base font-medium no-underline ${
-                  pathname === link.href ? "text-gold" : "text-cream"
+                  pathname === link.href ? "text-rose" : "text-cream"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="/cabane"
+              href="/inscriere"
               onClick={closeMobile}
-              className="mt-4 px-6 py-3 bg-gold text-night text-sm font-semibold tracking-wide no-underline text-center"
+              className="mt-4 px-6 py-3 bg-rose text-night text-sm font-semibold tracking-wide no-underline text-center"
             >
-              Rezervă acum
+              Înscrie-te acum
             </Link>
           </div>
         </div>

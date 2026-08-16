@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 
 export default function Phone3D() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -20,8 +21,8 @@ export default function Phone3D() {
     if (!mount) return;
 
     const isMobileView = window.innerWidth < 768;
-    const canvasW = isMobileView ? 180 : 280;
-    const canvasH = isMobileView ? 240 : 350;
+    const canvasW = isMobileView ? 200 : 320;
+    const canvasH = isMobileView ? 320 : 480;
 
     const scene = new THREE.Scene();
 
@@ -39,7 +40,7 @@ export default function Phone3D() {
     const ambient = new THREE.AmbientLight(0xffffff, 0.7);
     scene.add(ambient);
 
-    const keyLight = new THREE.DirectionalLight(0xC9A961, 1.5);
+    const keyLight = new THREE.DirectionalLight(0xD99AA6, 1.5);
     keyLight.position.set(3, 5, 3);
     scene.add(keyLight);
 
@@ -47,15 +48,18 @@ export default function Phone3D() {
     fillLight.position.set(-3, 2, 2);
     scene.add(fillLight);
 
-    const rimLight = new THREE.DirectionalLight(0xE0C68A, 1);
+    const rimLight = new THREE.DirectionalLight(0xE8B8C2, 1);
     rimLight.position.set(0, 3, -5);
     scene.add(rimLight);
 
     const loader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
+    loader.setDRACOLoader(dracoLoader);
     let model: THREE.Group | null = null;
     let pivot: THREE.Group | null = null;
 
-    loader.load("/phone.glb", (gltf) => {
+    loader.load("/models/ballet.glb", (gltf) => {
       model = gltf.scene;
 
       pivot = new THREE.Group();
@@ -65,7 +69,7 @@ export default function Phone3D() {
       const box = new THREE.Box3().setFromObject(model);
       const size = box.getSize(new THREE.Vector3());
 
-      const targetHeight = 0.25;
+      const targetHeight = 0.8;
       const scale = targetHeight / size.y;
       model.scale.setScalar(scale);
 
@@ -75,10 +79,10 @@ export default function Phone3D() {
       model.position.z = -center2.z;
       model.position.y = -box2.min.y;
 
-      pivot.position.y = -0.2;
+      pivot.position.y = -0.4;
       (pivot as THREE.Group & { baseY: number }).baseY = pivot.position.y;
     }, undefined, (error) => {
-      console.error("Error loading phone.glb:", error);
+      console.error("Error loading ballet.glb:", error);
     });
 
     let targetRotationY = 0;
@@ -137,11 +141,11 @@ export default function Phone3D() {
 
   return (
     <div className="fixed bottom-0 right-0 z-40 pointer-events-none animate-pop-in">
-      <div ref={mountRef} className="w-[180px] h-[240px] md:w-[280px] md:h-[350px] relative" style={{ opacity: 0.85 }}>
-        <div className="absolute top-[120px] md:top-[160px] left-1/2 -translate-x-1/2 bg-white rounded-2xl px-3 py-2 md:px-5 md:py-3 shadow-2xl z-10 animate-bubble-pop whitespace-nowrap">
+      <div ref={mountRef} className="w-[200px] h-[320px] md:w-[320px] md:h-[480px] relative" style={{ opacity: 0.9 }}>
+        <div className="absolute top-[120px] md:top-[200px] left-[70%] md:left-[82%] -translate-x-1/2 bg-white rounded-2xl px-3 py-2 md:px-5 md:py-3 shadow-2xl z-10 animate-bubble-pop whitespace-nowrap">
           <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45" />
-          <p className="font-display text-xs md:text-sm text-black font-semibold text-center">Rezervare telefonica</p>
-          <a href="tel:0758660941" className="text-black text-sm md:text-lg font-bold block text-center pointer-events-auto hover:text-gold transition-colors">0758 660 941</a>
+          <p className="font-display text-xs md:text-sm text-black font-semibold text-center">Înscriere telefonică</p>
+          <a href="tel:0758660941" className="text-black text-sm md:text-lg font-bold block text-center pointer-events-auto hover:text-rose transition-colors">0758 660 941</a>
         </div>
       </div>
     </div>

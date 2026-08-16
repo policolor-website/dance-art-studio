@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 const Stars = ({ rating }: { rating: number }) => (
   <div className="flex gap-1 mb-4">
     {Array.from({ length: rating }).map((_, i) => (
-      <span key={i} className="text-gold text-lg">★</span>
+      <span key={i} className="text-rose text-lg">★</span>
     ))}
   </div>
 );
@@ -14,13 +14,13 @@ export default function Reviews() {
     <section className="py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="text-center mb-16">
-          <p className="text-gold text-sm font-semibold uppercase tracking-[0.3em] mb-4">
+          <p className="text-rose text-sm font-semibold uppercase tracking-[0.3em] mb-4">
             Testimoniale
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-cream">
-            Părerea oaspeților
+            Părerea părinților și elevilor
           </h2>
-          <div className="w-24 h-px gold-line mx-auto mt-6" />
+          <div className="w-24 h-px rose-line mx-auto mt-6" />
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -31,7 +31,7 @@ export default function Reviews() {
                 <p className="text-cream/80 text-sm leading-relaxed mb-6 italic">
                   &ldquo;{review.text}&rdquo;
                 </p>
-                <p className="text-gold font-semibold text-sm">— {review.name}</p>
+                <p className="text-rose font-semibold text-sm">— {review.name}</p>
               </div>
             </Reveal>
           ))}
