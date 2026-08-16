@@ -25,7 +25,7 @@ export default function BookingEngine() {
       `Telefon: ${phone}\n\n` +
       `Vă rog să mă contactați pentru înscriere. Mulțumesc!`;
 
-    const whatsappUrl = `https://wa.me/40758660941?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/40722335357?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 

@@ -94,10 +94,10 @@ export default function EvenimentePage() {
                 Înscrie-te acum
               </Link>
               <a
-                href="tel:0758660941"
+                href="tel:0722335357"
                 className="px-8 py-4 border border-cream/30 text-cream text-sm font-semibold uppercase tracking-wider no-underline transition-all hover:border-rose hover:text-rose"
               >
-                Sună: 0758 660 941
+                Sună: 0722 335 357
               </a>
             </div>
           </div>

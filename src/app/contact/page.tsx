@@ -47,8 +47,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-muted text-xs uppercase tracking-wider mb-1">Telefon</p>
-                  <a href="tel:0758660941" className="text-cream hover:text-rose no-underline transition-colors">
-                    0758 660 941
+                  <a href="tel:0722335357" className="text-cream hover:text-rose no-underline transition-colors">
+                    0722 335 357
                   </a>
                 </div>
               </div>

@@ -37,7 +37,7 @@ export default function Footer() {
               Informații contact
             </h3>
             <ul className="flex flex-col gap-2 list-none">
-              <li><a href="tel:0758660941" className="text-sm text-muted hover:text-rose no-underline transition-colors">0758 660 941</a></li>
+              <li><a href="tel:0722335357" className="text-sm text-muted hover:text-rose no-underline transition-colors">0722 335 357</a></li>
               <li><a href="mailto:contact@danceartstudio.ro" className="text-sm text-muted hover:text-rose no-underline transition-colors">contact@danceartstudio.ro</a></li>
               <li className="text-sm text-muted">Strada Artei nr. 12, București, România</li>
             </ul>

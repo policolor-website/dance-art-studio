@@ -37,7 +37,7 @@ export default function InscrierePage() {
       `Email: ${email || "—"}\n\n` +
       `Vă rog să mă contactați pentru înscriere și ședința de probă. Mulțumesc!`;
 
-    const whatsappUrl = `https://wa.me/40758660941?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/40722335357?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
     setSubmitted(true);
   };
