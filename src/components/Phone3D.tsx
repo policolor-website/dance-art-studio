@@ -91,7 +91,7 @@ export default function Phone3D() {
 
     const onScroll = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      targetRotationY = max > 0 ? (window.scrollY / max) * Math.PI * 3 : 0;
+      targetRotationY = max > 0 ? (window.scrollY / max) * Math.PI * 6 : 0;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
