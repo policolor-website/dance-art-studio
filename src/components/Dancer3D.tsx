@@ -58,7 +58,7 @@ export default function Dancer3D() {
     scene.add(wrapper);
 
     loader.load(
-      "/uetbzv7s3y9d.glb",
+      "/models/botine.glb",
       (gltf) => {
         model = gltf.scene;
         wrapper.add(model);
