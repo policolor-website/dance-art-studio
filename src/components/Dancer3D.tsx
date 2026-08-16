@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 
 export default function Dancer3D() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -53,6 +54,9 @@ export default function Dancer3D() {
     scene.add(rimLight);
 
     const loader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
+    loader.setDRACOLoader(dracoLoader);
     let model: THREE.Group | null = null;
     const wrapper = new THREE.Group();
     scene.add(wrapper);
