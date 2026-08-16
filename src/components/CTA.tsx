@@ -15,7 +15,7 @@ export default function CTA() {
         <div className="absolute inset-0 bg-night/80" />
       </div>
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center px-6">
+      <div className="relative z-10 max-w-3xl mx-auto text-center px-6 glass rounded-3xl py-12">
         <Reveal>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-cream mb-6">
             Descoperă arta <span className="text-gradient-rose">baletului</span>

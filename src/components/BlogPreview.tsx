@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function BlogPreview() {
   return (
-    <section className="py-24 bg-night-light">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="text-center mb-16">
           <p className="text-rose text-sm font-semibold uppercase tracking-[0.3em] mb-4">
@@ -20,8 +20,8 @@ export default function BlogPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, i) => (
             <Reveal key={post.slug} delay={i * 100}>
-              <Link href={`/blog/${post.slug}`} className="group block no-underline">
-                <div className="relative overflow-hidden aspect-4/3 mb-5">
+              <Link href={`/blog/${post.slug}`} className="group block no-underline glass rounded-2xl p-5 card-hover">
+                <div className="relative overflow-hidden aspect-4/3 mb-5 rounded-xl">
                   <Image
                     src={post.image}
                     alt={post.title}

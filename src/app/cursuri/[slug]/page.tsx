@@ -58,15 +58,15 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-8">
-              <div className="bg-night-light border border-border-dark p-4 text-center">
+              <div className="glass rounded-2xl p-4 text-center">
                 <p className="text-rose text-2xl font-bold">{course.duration}</p>
                 <p className="text-muted text-xs uppercase tracking-wider mt-1">Durată</p>
               </div>
-              <div className="bg-night-light border border-border-dark p-4 text-center">
+              <div className="glass rounded-2xl p-4 text-center">
                 <p className="text-rose text-2xl font-bold">{course.price}</p>
                 <p className="text-muted text-xs uppercase tracking-wider mt-1">Lei/lună</p>
               </div>
-              <div className="bg-night-light border border-border-dark p-4 text-center">
+              <div className="glass rounded-2xl p-4 text-center">
                 <p className="text-rose text-sm font-bold leading-tight">{course.schedule}</p>
                 <p className="text-muted text-xs uppercase tracking-wider mt-1">Program</p>
               </div>

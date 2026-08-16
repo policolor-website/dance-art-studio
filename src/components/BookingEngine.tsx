@@ -30,7 +30,7 @@ export default function BookingEngine() {
   };
 
   return (
-    <div className="bg-night-light border border-border-dark p-4 md:p-6">
+    <div className="glass rounded-2xl p-4 md:p-6">
       <h3 className="font-display text-xl font-bold text-cream mb-4">
         Înscrie-te la cursuri
       </h3>
@@ -45,7 +45,7 @@ export default function BookingEngine() {
             onChange={(e) => setName(e.target.value)}
             required
             placeholder="Numele copilului"
-            className="w-full bg-night border border-border-dark text-cream px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
+            className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
           />
         </div>
         <div>
@@ -59,7 +59,7 @@ export default function BookingEngine() {
             min="3"
             max="99"
             placeholder="Vârsta"
-            className="w-full bg-night border border-border-dark text-cream px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
+            className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
           />
         </div>
         <div>
@@ -69,7 +69,7 @@ export default function BookingEngine() {
           <select
             value={courseType}
             onChange={(e) => setCourseType(e.target.value)}
-            className="w-full bg-night border border-border-dark text-cream px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
+            className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
           >
             <option value="all">Fără preferință</option>
             {courses.map((course) => (
@@ -89,7 +89,7 @@ export default function BookingEngine() {
             onChange={(e) => setPhone(e.target.value)}
             required
             placeholder="07xx xxx xxx"
-            className="w-full bg-night border border-border-dark text-cream px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
+            className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-2.5 text-sm focus:border-rose focus:outline-none transition-colors"
           />
         </div>
         <div className="flex items-end">

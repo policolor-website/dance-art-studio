@@ -64,21 +64,21 @@ export default function DespreNoiPage() {
 
         <Reveal delay={200}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-night-light border border-border-dark p-6 text-center card-hover">
+            <div className="glass rounded-2xl p-6 text-center card-hover">
               <div className="text-3xl mb-3">🩰</div>
               <h3 className="text-cream font-semibold mb-2">Balet clasic</h3>
               <p className="text-muted text-sm">
                 Tehnică clasică pentru toate vârstele și nivelurile
               </p>
             </div>
-            <div className="bg-night-light border border-border-dark p-6 text-center card-hover">
+            <div className="glass rounded-2xl p-6 text-center card-hover">
               <div className="text-3xl mb-3">🎭</div>
               <h3 className="text-cream font-semibold mb-2">Spectacole</h3>
               <p className="text-muted text-sm">
                 Gala anuală, spectacole de Crăciun și competiții
               </p>
             </div>
-            <div className="bg-night-light border border-border-dark p-6 text-center card-hover">
+            <div className="glass rounded-2xl p-6 text-center card-hover">
               <div className="text-3xl mb-3">🏆</div>
               <h3 className="text-cream font-semibold mb-2">Examene & Premii</h3>
               <p className="text-muted text-sm">
@@ -90,19 +90,19 @@ export default function DespreNoiPage() {
 
         <Reveal delay={300}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-            <div className="bg-night-light border border-border-dark p-6 text-center">
+            <div className="glass rounded-2xl p-6 text-center">
               <p className="font-display text-3xl font-bold text-rose">15+</p>
               <p className="text-muted text-xs uppercase tracking-wider mt-1">Ani experiență</p>
             </div>
-            <div className="bg-night-light border border-border-dark p-6 text-center">
+            <div className="glass rounded-2xl p-6 text-center">
               <p className="font-display text-3xl font-bold text-rose">500+</p>
               <p className="text-muted text-xs uppercase tracking-wider mt-1">Elevi formați</p>
             </div>
-            <div className="bg-night-light border border-border-dark p-6 text-center">
+            <div className="glass rounded-2xl p-6 text-center">
               <p className="font-display text-3xl font-bold text-rose">5</p>
               <p className="text-muted text-xs uppercase tracking-wider mt-1">Cursuri</p>
             </div>
-            <div className="bg-night-light border border-border-dark p-6 text-center">
+            <div className="glass rounded-2xl p-6 text-center">
               <p className="font-display text-3xl font-bold text-rose">3</p>
               <p className="text-muted text-xs uppercase tracking-wider mt-1">Profesori</p>
             </div>
@@ -118,7 +118,7 @@ export default function DespreNoiPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {teachers.map((teacher, i) => (
                 <Reveal key={teacher.slug} delay={i * 100}>
-                  <div className="bg-night-light border border-border-dark overflow-hidden card-hover h-full flex flex-col">
+                  <div className="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col">
                     <div className="relative aspect-4/3 overflow-hidden">
                       <Image
                         src={teacher.image}

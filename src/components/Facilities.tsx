@@ -33,7 +33,7 @@ export default function Facilities() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {facilities.map((f, i) => (
             <Reveal key={f.label} delay={i * 80}>
-              <div className="card-hover bg-night-light border border-border-dark p-6 text-center h-full">
+              <div className="glass card-hover p-6 text-center h-full rounded-2xl">
                 <div className="text-3xl mb-3">{iconMap[f.icon] || "\u2728"}</div>
                 <h3 className="text-cream font-semibold text-sm mb-1">{f.label}</h3>
                 <p className="text-muted text-xs">{f.desc}</p>

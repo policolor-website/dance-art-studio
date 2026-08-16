@@ -63,7 +63,7 @@ export default function InscrierePage() {
       <div className="max-w-3xl mx-auto px-6">
 
         {submitted ? (
-          <div className="bg-night-light border border-rose p-8 text-center">
+          <div className="glass rounded-2xl border-rose p-8 text-center">
             <div className="text-4xl mb-4">🩰</div>
             <h2 className="font-display text-2xl font-bold text-rose mb-2">Înscriere trimisă!</h2>
             <p className="text-cream/80 text-sm mb-6">
@@ -79,7 +79,7 @@ export default function InscrierePage() {
           </div>
         ) : (
           <>
-            <div className="bg-night-light border border-border-dark p-6 mb-8">
+            <div className="glass rounded-2xl p-6 mb-8">
               <h2 className="font-display text-xl font-bold text-cream mb-3">
                 Ședința de probă este gratuită
               </h2>
@@ -91,7 +91,7 @@ export default function InscrierePage() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-night-light border border-border-dark p-8">
+            <form onSubmit={handleSubmit} className="glass rounded-2xl p-8">
               <div className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -102,7 +102,7 @@ export default function InscrierePage() {
                       onChange={(e) => setName(e.target.value)}
                       required
                       placeholder="Numele copilului"
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -114,7 +114,7 @@ export default function InscrierePage() {
                       min="3"
                       max="99"
                       placeholder="Vârsta"
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function InscrierePage() {
                     value={parentName}
                     onChange={(e) => setParentName(e.target.value)}
                     placeholder="Numele părintelui (pentru minori)"
-                    className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                    className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                   />
                 </div>
 
@@ -139,7 +139,7 @@ export default function InscrierePage() {
                       onChange={(e) => setPhone(e.target.value)}
                       required
                       placeholder="07xx xxx xxx"
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -149,7 +149,7 @@ export default function InscrierePage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="email@exemplu.com"
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function InscrierePage() {
                   <select
                     value={courseType}
                     onChange={(e) => setCourseType(e.target.value)}
-                    className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                    className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                   >
                     <option value="">Fără preferință (recomandați-mi)</option>
                     {courses.map((course) => (
@@ -175,7 +175,7 @@ export default function InscrierePage() {
                   <select
                     value={experience}
                     onChange={(e) => setExperience(e.target.value)}
-                    className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                    className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                   >
                     <option value="none">Fără experiență</option>
                     <option value="beginner">Începător (1-2 ani)</option>

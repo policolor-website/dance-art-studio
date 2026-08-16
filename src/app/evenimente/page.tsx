@@ -45,7 +45,7 @@ export default function EvenimentePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event, i) => (
             <Reveal key={event.slug} delay={i * 80}>
-              <div className="group bg-night-light border border-border-dark overflow-hidden card-hover h-full flex flex-col">
+              <div className="group glass rounded-2xl overflow-hidden card-hover h-full flex flex-col">
                 <div className="relative aspect-4/3 overflow-hidden">
                   <Image
                     src={event.image}

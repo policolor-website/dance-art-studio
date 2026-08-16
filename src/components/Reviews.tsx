@@ -26,7 +26,7 @@ export default function Reviews() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, i) => (
             <Reveal key={review.name} delay={i * 100}>
-              <div className="bg-night-light border border-border-dark p-8 h-full card-hover">
+              <div className="glass rounded-2xl p-8 h-full card-hover">
                 <Stars rating={review.rating} />
                 <p className="text-cream/80 text-sm leading-relaxed mb-6 italic">
                   &ldquo;{review.text}&rdquo;

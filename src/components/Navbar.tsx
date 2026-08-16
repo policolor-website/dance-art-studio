@@ -36,8 +36,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "py-3 border-b border-border-dark bg-night/90 backdrop-blur-md"
-          : "py-5 border-b border-transparent bg-night/70 backdrop-blur-sm"
+          ? "py-3 border-b border-rose/20 bg-night/80 backdrop-blur-md"
+          : "py-5 border-b border-transparent bg-night/50 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">

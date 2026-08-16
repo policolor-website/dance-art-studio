@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function RoomsPreview() {
   return (
-    <section className="py-24 bg-night-light/50">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal className="text-center mb-16">
           <p className="text-rose text-sm font-semibold uppercase tracking-[0.3em] mb-4">
@@ -20,8 +20,8 @@ export default function RoomsPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {courses.map((course, i) => (
             <Reveal key={course.slug} delay={i * 100}>
-              <Link href={`/cursuri/${course.slug}`} className="group block no-underline">
-                <div className="relative overflow-hidden aspect-4/3 mb-5">
+              <Link href={`/cursuri/${course.slug}`} className="group block no-underline glass rounded-2xl p-5 card-hover">
+                <div className="relative overflow-hidden aspect-4/3 mb-5 rounded-xl">
                   <Image
                     src={course.image}
                     alt={course.name}

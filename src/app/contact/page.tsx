@@ -97,7 +97,7 @@ export default function ContactPage() {
 
           <div>
             {submitted ? (
-              <div className="bg-night-light border border-rose p-8 text-center">
+              <div className="glass rounded-2xl border-rose p-8 text-center">
                 <div className="text-4xl mb-4">✓</div>
                 <h2 className="text-rose font-semibold text-xl mb-2">Mesaj trimis!</h2>
                 <p className="text-cream/80 text-sm">
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-night-light border border-border-dark p-8">
+              <form onSubmit={handleSubmit} className="glass rounded-2xl p-8">
                 <h2 className="font-display text-2xl font-bold text-cream mb-6">
                   Trimite-ne un mesaj
                 </h2>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                       onChange={(e) => setMessage(e.target.value)}
                       required
                       rows={5}
-                      className="w-full bg-night border border-border-dark text-cream px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors resize-none"
+                      className="w-full bg-white/5 border border-rose/20 text-cream backdrop-blur-sm px-4 py-3 text-sm focus:border-rose focus:outline-none transition-colors resize-none"
                     />
                   </div>
                   <button
